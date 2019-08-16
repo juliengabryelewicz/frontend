@@ -6,7 +6,12 @@
 	export async function preload({ params, query }) {
 		const response = await api.get(`categories?slug=${params.slug}`);
 		const category = response[0];
-		return { category };
+
+		if(category === undefined){
+			this.error(404, "Nous n'avons pas trouvé la page que vous recherchez");
+		}else{
+			return { category };
+		}
 	}
 </script>
 
@@ -15,14 +20,14 @@
 </script>
 
 <svelte:head>
-	<title>{category.seo_title}</title>
+	<title>{category.seo_title} | Julien Gabryelewicz</title>
 	<meta name="description" content="{category.seo_description}">
 	<meta name="keywords" content="{category.seo_keywords}">
 	<link rel="canonical" href="/category/{category.slug}">
 </svelte:head>
 
 <div class="text-center px-2 py-12 mb-6 border-secondary border-b-4">
-	<h1 class="text-xl md:text-4xl pb-4 font-title uppercase">{category.titre}</h1>
+	<h1>{category.titre}</h1>
 	<p>{category.contenu}</p>
 </div>
 

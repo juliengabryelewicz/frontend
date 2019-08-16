@@ -4425,6 +4425,28 @@ video {
   text-transform: inherit;
 }
 
+h1 {
+  font-size: 2.25rem;
+  font-family: Open Sans Condensed, sans-serif;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-family: Open Sans Condensed, sans-serif;
+  text-transform: uppercase;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-family: Open Sans Condensed, sans-serif;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-family: Open Sans Condensed, sans-serif;
+}
+
 @media (min-width: 640px) {
   .sm\:appearance-none {
     -webkit-appearance: none;

@@ -3,3 +3,19 @@
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
+
+h1 {
+  @apply text-4xl font-title uppercase;
+}
+
+h2 {
+  @apply text-xl font-title uppercase;
+}
+
+h3 {
+  @apply uppercase font-title;
+}
+
+h4 {
+  @apply uppercase font-title;
+}

@@ -44,6 +44,6 @@ module.exports = {
       hyphens: true,          // defaults to true
       textUnset: true,        // defaults to true
       componentPrefix: 'c-',  // for text styles; defaults to 'c-'
-    }),
+    })
   ],
 }

@@ -4,6 +4,8 @@
 
 	export let articleList;
 	export let index;
+
+	import SmallButton from '../Buttons/SmallButton.svelte';
 </script>
 
 <div class="w-full lg:flex p-5">
@@ -19,7 +21,7 @@
       <div class="text-sm">
         <p class="text-black leading-none">
 				{#each articleList.categories as articleCategory}
-					<span><a class="bg-link rounded text-white p-2 uppercase font-title" href="/blog/category/{articleCategory.slug}">{articleCategory.titre}</a></span>
+					<SmallButton content={articleCategory.titre} link="/blog/category/{articleCategory.slug}" />
 				{/each}
 				</p>
       </div>

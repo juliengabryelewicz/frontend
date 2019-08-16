@@ -4,7 +4,11 @@
 	export async function preload({ params, query }) {
 		const response = await api.get(`pages?slug=${params.slug}`);
 		const page = response[0];
-		return { page };
+		if(page === undefined){
+			this.error(404, "Nous n'avons pas trouvé la page que vous recherchez");
+		}else{
+			return { page };
+		}
 	}
 </script>
 
@@ -14,14 +18,14 @@
 
 
 <svelte:head>
-	<title>{page.seo_title}</title>
+	<title>{page.seo_title} | Julien Gabryelewicz</title>
 	<meta name="description" content="{page.seo_description}">
 	<meta name="keywords" content="{page.seo_keywords}">
 	<link rel="canonical" href="/page/{page.slug}">
 </svelte:head>
 
 <div class="text-center px-6 py-4 border-secondary border-b-4">
-	<h1 class="text-xl md:text-4xl font-title uppercase">{page.titre}</h1>
+	<h1>{page.titre}</h1>
 </div>
 
 <div class="w-full px-6 py-12">

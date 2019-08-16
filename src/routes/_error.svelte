@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-	<title>{status}</title>
+	<title>{status} | Julien Gabryelewicz</title>
 </svelte:head>
 
 <h1>{status}</h1>
