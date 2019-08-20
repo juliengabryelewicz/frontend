@@ -4,19 +4,32 @@
 	import CategoryList from '../../../components/CategoryList/index.svelte';
 
 	export async function preload({ params, query }) {
+
+		let currentPage = query && query.page ? + query.page - 1 : 0
+		const endpoint = 'articles';
+		const page_size = 10;
+		let parameters = `visible=1&categories.slug=${params.slug}&_sort=created_at:DESC&_limit=${page_size}&_start=${currentPage * page_size}`;
+		let queryApi = `${endpoint}?${parameters}`;
+		let queryCount = `${endpoint}/count?${parameters}`;
+		const articlesList = await api.get(queryApi);
+		const articlesCount = await api.get(queryCount);
+
 		const response = await api.get(`categories?slug=${params.slug}`);
 		const category = response[0];
+		const categories = await api.get(`categories`);
 
 		if(category === undefined){
 			this.error(404, "Nous n'avons pas trouvé la page que vous recherchez");
 		}else{
-			return { category };
+			return { category, categories, articlesList, articlesCount };
 		}
 	}
 </script>
-
 <script>
+	export let articlesList;
+	export let articlesCount;
 	export let category;
+	export let categories;
 </script>
 
 <svelte:head>
@@ -33,9 +46,9 @@
 
 <div class="w-full flex flex-wrap px-6 py-2">
 	<div class="w-full lg:w-4/5 lg:px-6 leading-normal">
-		<ArticleList {category} />
+		<ArticleList {articlesList} {articlesCount} />
 	</div>
 	<div class="w-full lg:w-1/5 lg:px-6 leading-normal">
-		<CategoryList />
+		<CategoryList {categories} />
 	</div>
 </div>

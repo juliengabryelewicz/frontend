@@ -1,15 +1,7 @@
 <script>
-
-	import * as api from '../../helper/api.js';
 	import CategorySingle from './CategorySingle.svelte';
-	import { onMount } from 'svelte';
 
-	let categories = [];
-
-	onMount(async () => {
-		categories = await api.get(`categories`);
-	});
-
+	export let categories = [];
 </script>
 
 <div class="w-full sticky inset-0 h-64 lg:h-auto overflow-x-hidden overflow-y-auto lg:overflow-y-hidden lg:block mt-0 z-20" style="top:5em;" id="menu-content">

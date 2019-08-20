@@ -1,9 +1,22 @@
 <script context="module">
+  import * as api from '../helper/api.js';
 	import MainList from '../components/MainList/index.svelte';
 	import BigButton from '../components/Buttons/BigButton.svelte';
+
+	export async function preload({ params, query }) {
+		const articlesList = await api.get(`articles?visible=1&_sort=created_at:DESC&_limit=3`);
+		return { articlesList };
+	}
 </script>
+<script>
+	export let articlesList;
+</script>
+
 <svelte:head>
-	<title>Blog</title>
+	<title>Julien Gabryelewicz | Développeur web / mobile</title>
+	<meta name="description" content="Julien Gabryelewicz | Développeur web / mobile">
+	<meta name="keywords" content="julien,gabryelewicz,développeur,developpeur,web,mobile,prolog,php,elixir,rust">
+	<link rel="canonical" href="/">
 </svelte:head>
 
 <section id="blog" class="w-full lg:mt-0 text-gray-900 leading-normal">
@@ -15,7 +28,7 @@
 	</div>
 
 	<div class="container max-w-4xl mx-auto md:flex-no-wrap">
-		<MainList />
+		<MainList {articlesList} />
 	</div>
 </section>
 
