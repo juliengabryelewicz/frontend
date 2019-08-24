@@ -33,10 +33,10 @@
 </svelte:head>
 
 <div class="w-full flex flex-wrap px-6 py-12">
-	<div class="lg:w-4/5 lg:px-6 leading-normal">
+	<div class="w-full lg:w-4/5 lg:px-6 sm:w-full xs:w-full leading-normal">
 		<ArticleList {category} {articlesList} {articlesCount} />
 	</div>
-	<div class="lg:w-1/5 lg:px-6 leading-normal">
+	<div class="w-full lg:w-1/5 lg:px-6 sm:w-full xs:w-full leading-normal">
 		<CategoryList {categories} />
 	</div>
 </div>

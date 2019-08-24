@@ -3,7 +3,7 @@ const config = require('sapper/config/webpack.js');
 const pkg = require('./package.json');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const Dotenv = require('dotenv-webpack');
-
+const path = require('path');
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 
@@ -39,13 +39,15 @@ module.exports = {
 		},
 		mode,
 		plugins: [
+			new Dotenv({
+	      path: path.resolve(__dirname, './.env')
+	    }),
 			// pending https://github.com/sveltejs/svelte/issues/2377
 			// dev && new webpack.HotModuleReplacementPlugin(),
 			new webpack.DefinePlugin({
 				'process.browser': true,
 				'process.env.NODE_ENV': JSON.stringify(mode)
-			}),
-			new Dotenv()
+			})
 		].filter(Boolean),
 		devtool: dev && 'inline-source-map'
 	},

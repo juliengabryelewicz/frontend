@@ -8,9 +8,14 @@
 	import SmallButton from '../Buttons/SmallButton.svelte';
 </script>
 
-<div class="w-full lg:flex p-5">
-  <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover text-center overflow-hidden" style="background-image: url('{articleList.image}')" title="{articleList.titre}">
-  </div>
+<div class="max-w-md w-full lg:flex p-5">
+	{#if articleList.image}
+	  <div class="h-48 lg:w-48 flex-none bg-cover text-center" style="background-image: url('https://{process.env.API_URL}/{articleList.image.url}')" title="{articleList.titre}">
+	  </div>
+	{:else}
+		<div class="lg:h-auto lg:w-48 flex-none overflow-hidden">
+	  </div>
+	{/if}
   <div class="p-4 flex flex-col justify-between leading-normal">
     <div class="mb-8">
       <div class="text-primary font-bold text-xl uppercase font-title"><a rel=prefetch class="no-underline hover:underline text-black" href='/blog/post/{articleList.slug}'>{articleList.titre}</a></div>
