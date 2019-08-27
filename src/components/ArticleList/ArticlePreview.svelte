@@ -8,7 +8,7 @@
 	import SmallButton from '../Buttons/SmallButton.svelte';
 </script>
 
-<div class="max-w-md w-full lg:flex p-5">
+<div class="max-w-md w-full lg:flex p-5" itemscope itemtype="http://schema.org/Article">
 	{#if articleList.image}
 	  <div class="h-48 lg:w-48 flex-none bg-cover text-center" style="background-image: url('https://{process.env.API_URL}/{articleList.image.url}')" title="{articleList.titre}">
 	  </div>
@@ -18,9 +18,9 @@
 	{/if}
   <div class="p-4 flex flex-col justify-between leading-normal">
     <div class="mb-8">
-      <div class="text-primary font-bold text-xl uppercase font-title"><a rel=prefetch class="no-underline hover:underline text-black" href='/blog/post/{articleList.slug}'>{articleList.titre}</a></div>
-			<p class="text-grey-dark text-xs mb-2">{datehelper.writeDate(articleList.updated_at)}</p>
-      <p class="text-grey-darker text-base">{articleList.resume}</p>
+      <div class="text-primary font-bold text-xl uppercase font-title"><a rel=prefetch class="no-underline hover:underline text-black" title='{articleList.titre}' href='/blog/post/{articleList.slug}' itemprop="name">{articleList.titre}</a></div>
+			<p class="text-grey-dark text-xs mb-2" itemprop="datePublished">{datehelper.writeDate(articleList.updated_at)}</p>
+      <p class="text-grey-darker text-base" itemprop="articleBody">{articleList.resume}</p>
     </div>
     <div class="flex items-center">
       <div class="text-sm">

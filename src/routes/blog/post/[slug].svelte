@@ -30,11 +30,11 @@
 	<link rel="canonical" href="/post/{article.slug}">
 </svelte:head>
 
-<div class="w-full flex flex-wrap px-6 py-12">
+<div class="w-full flex flex-wrap px-6 py-12" itemscope itemtype="http://schema.org/Article">
 	<div class="lg:w-4/5 lg:px-6 leading-normal">
 		<div class="py-4 border-secondary border-b-4">
-			<h1>{article.titre}</h1>
-			<div class="mb-2 text-xs pb-4">
+			<h1 itemprop="name">{article.titre}</h1>
+			<div class="mb-2 text-xs pb-4" itemprop="datePublished">
 				{datehelper.writeDate(article.updated_at)}
 			</div>
 			<div>
@@ -45,7 +45,7 @@
 		</div>
 
 		<div class="w-full py-4 bg-white">
-			<div class="pb-10">
+			<div class="pb-10" itemprop="articleBody">
 				{@html article.contenu}
 			</div>
 		</div>

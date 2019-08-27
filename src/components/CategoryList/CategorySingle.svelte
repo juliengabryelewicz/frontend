@@ -3,5 +3,5 @@
 </script>
 
 <li class="py-2 md:my-0">
-	 <a class="text-sm uppercase font-title text-secondary" rel=prefetch href="/blog/category/{category.slug}">{category.titre} ({category.articles.length})</a>
+	 <a class="text-sm uppercase font-title text-secondary" title="{category.title}" rel=prefetch href="/blog/category/{category.slug}">{category.titre} ({category.articles.length})</a>
 </li>

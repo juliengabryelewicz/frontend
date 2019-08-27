@@ -13,9 +13,9 @@
 </script>
 
 <svelte:head>
-	<title>Julien Gabryelewicz | Développeur web / mobile</title>
-	<meta name="description" content="Julien Gabryelewicz | Développeur web / mobile">
-	<meta name="keywords" content="julien,gabryelewicz,développeur,developpeur,web,mobile,prolog,php,elixir,rust">
+	<title>Julien Gabryelewicz | Développeur web / mobile passionné par la linguistique</title>
+	<meta name="description" content="Julien Gabryelewicz | Développeur web / mobile, passionné par la linguistique">
+	<meta name="keywords" content="julien,gabryelewicz,développeur,developpeur,web,mobile,prolog,php,javascript,elixir,rust,linguistique">
 	<link rel="canonical" href="/">
 </svelte:head>
 

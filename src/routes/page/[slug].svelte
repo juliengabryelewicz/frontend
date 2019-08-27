@@ -24,12 +24,14 @@
 	<link rel="canonical" href="/page/{page.slug}">
 </svelte:head>
 
-<div class="text-center px-6 py-4 border-secondary border-b-4">
-	<h1>{page.titre}</h1>
-</div>
+<div class="w-full flex flex-wrap px-6 py-12" itemscope itemtype="http://schema.org/Article">
+	<div class="text-center px-6 py-4 border-secondary border-b-4 w-full">
+		<h1 itemprop="name">{page.titre}</h1>
+	</div>
 
-<div class="w-full px-6 py-12">
-	<div class="container max-w-4xl mx-auto pb-10">
-		{@html page.contenu}
+	<div class="w-full px-6 py-12">
+		<div class="container max-w-4xl mx-auto pb-10" itemprop="articleBody">
+			{@html page.contenu}
+		</div>
 	</div>
 </div>
