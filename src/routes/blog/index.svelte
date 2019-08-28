@@ -29,7 +29,18 @@
 	<title>Blog | Julien Gabryelewicz</title>
 	<meta name="description" content="Blog | Julien Gabryelewicz">
 	<meta name="keywords" content="blog,julien,gabryelewicz,développeur,développement,livres,linguistique">
-	<link rel="canonical" href="/blog">
+	<link rel="canonical" href="https://juliengabryelewicz.fr/blog">
+	<meta property="og:url" content="https://juliengabryelewicz.fr/blog" />
+	<meta property="og:site_name" content="Julien Gabryelewicz" />
+	<meta property="og:locale" content="fr_FR" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Blog | Julien Gabryelewicz" />
+	<meta property="og:description" content="Blog | Julien Gabryelewicz" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@juliengabryelewicz" />
+	<meta name="twitter:creator" content="@juliengabryelewicz" />
+	<meta name="twitter:title" content="Blog | Julien Gabryelewicz" />
+	<meta name="twitter:description" content="Blog | Julien Gabryelewicz" />
 </svelte:head>
 
 <div class="w-full flex flex-wrap px-6 py-12">

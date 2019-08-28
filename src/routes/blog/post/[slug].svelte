@@ -27,7 +27,18 @@
 	<title>{article.seo_title} | Julien Gabryelewicz</title>
 	<meta name="description" content="{article.seo_description}">
 	<meta name="keywords" content="{article.seo_keywords}">
-	<link rel="canonical" href="/post/{article.slug}">
+	<link rel="canonical" href="https://juliengabryelewicz.fr/blog/post/{article.slug}">
+	<meta property="og:url" content="https://juliengabryelewicz.fr/blog/post/{article.slug}" />
+	<meta property="og:site_name" content="Julien Gabryelewicz" />
+	<meta property="og:locale" content="fr_FR" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="{article.seo_title} | Julien Gabryelewicz" />
+	<meta property="og:description" content="{article.resume}" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@juliengabryelewicz" />
+	<meta name="twitter:creator" content="@juliengabryelewicz" />
+	<meta name="twitter:title" content="{article.seo_title} | Julien Gabryelewicz" />
+	<meta name="twitter:description" content="{article.resume}" />
 </svelte:head>
 
 <div class="w-full flex flex-wrap px-6 py-12" itemscope itemtype="http://schema.org/Article">

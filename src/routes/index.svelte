@@ -13,33 +13,30 @@
 </script>
 
 <svelte:head>
-	<title>Julien Gabryelewicz | Développeur web / mobile passionné par la linguistique</title>
-	<meta name="description" content="Julien Gabryelewicz | Développeur web / mobile, passionné par la linguistique">
+	<title>Julien Gabryelewicz | Développeur web passionné par la linguistique</title>
+	<meta name="description" content="Julien Gabryelewicz | Développeur web passionné par la linguistique">
 	<meta name="keywords" content="julien,gabryelewicz,développeur,developpeur,web,mobile,prolog,php,javascript,elixir,rust,linguistique">
-	<link rel="canonical" href="/">
+	<link rel="canonical" href="https://juliengabryelewicz.fr/">
+	<meta property="og:url" content="https://juliengabryelewicz.fr/" />
+	<meta property="og:site_name" content="Julien Gabryelewicz" />
+	<meta property="og:locale" content="fr_FR" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Julien Gabryelewicz | Développeur web passionné par la linguistique" />
+	<meta property="og:description" content="Julien Gabryelewicz | Développeur web passionné par la linguistique" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@juliengabryelewicz" />
+	<meta name="twitter:creator" content="@juliengabryelewicz" />
+	<meta name="twitter:title" content="Julien Gabryelewicz | Développeur web passionné par la linguistique" />
+	<meta name="twitter:description" content="Julien Gabryelewicz | Développeur web passionné par la linguistique" />
 </svelte:head>
-
-<section id="blog" class="w-full lg:mt-0 text-gray-900 leading-normal">
-
-	<div class="mx-auto text-center">
-	<h2 class="border-t-4 border-secondary text-center font-title top-title uppercase text-xl relative">
-		<span class="bg-transparent inline-block top-span relative bg-primary px-2 font-primary">Les derniers articles</span>
-	</h2>
-	</div>
-
-	<div class="container max-w-4xl mx-auto md:flex-no-wrap">
-		<MainList {articlesList} />
-	</div>
-</section>
 
 <section id="a-propos" class="w-full lg:mt-0 text-gray-900 leading-normal">
 	<div class="mx-auto text-center">
+		<h1>développeur web habitant à Arques dans le Pas-de-Calais.</h1>
+		<p>Je travaille actuellement pour <a href="https://www.adexos.fr/" title="Adexos" target="_blank">l'agence web Adexos</a> à Béthune en tant que Développeur Magento (1 & 2).</p>
 		<h2 class="border-t-4 border-secondary text-center font-title top-title uppercase text-xl relative">
-			<span class="bg-transparent inline-block top-span relative bg-primary px-2 font-primary">Qui suis-je?</span>
+			<span class="bg-transparent inline-block top-span relative bg-primary px-2 font-primary">Mes passions</span>
 		</h2>
-		<h3>Je suis un développeur informatique habitant à Arques dans le Pas-de-Calais.</h3>
-		<p>Je travaille actuellement pour <a href="https://www.adexos.fr/" target="_blank">l'agence web Adexos</a> à Béthune en tant que Développeur Magento (1 & 2).</p>
-		<p class="mb-4">Mes sujets de prédilection sont les suivants :</p>
 		<div class="mb-4 lg:flex">
 		  <div class="p-4 lg:w-1/4">
 				<h4>Programmation</h4>
@@ -67,5 +64,17 @@
 			</div>
 		</div>
 		<BigButton content={"En savoir plus"} link={"/page/cv"} />
+	</div>
+</section>
+
+<section id="blog" class="w-full lg:mt-0 text-gray-900 leading-normal">
+	<div class="mx-auto text-center">
+	<h2 class="border-t-4 border-secondary text-center font-title top-title uppercase text-xl relative">
+		<span class="bg-transparent inline-block top-span relative bg-primary px-2 font-primary">Les derniers articles</span>
+	</h2>
+	</div>
+
+	<div class="container max-w-4xl mx-auto md:flex-no-wrap">
+		<MainList {articlesList} />
 	</div>
 </section>

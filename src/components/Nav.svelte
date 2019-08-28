@@ -4,7 +4,7 @@
 
 <header class="w-full px-6">
 	<div>
-		<a rel=prefetch href="." class="block py-6 text-secondary w-full text-center no-underline font-title uppercase text-4xl text-primary">Julien Gabryelewicz</a>
+		<a rel=prefetch href="." title="Julien Gabryelewicz" class="block py-6 text-secondary w-full text-center no-underline font-title uppercase text-4xl text-primary">Julien Gabryelewicz</a>
 	</div>
 </header>
 
