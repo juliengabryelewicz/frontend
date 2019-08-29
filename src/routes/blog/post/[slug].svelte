@@ -46,7 +46,7 @@
 		<div class="py-4 border-secondary border-b-4">
 			<h1 itemprop="name">{article.titre}</h1>
 			<div class="mb-2 text-xs pb-4" itemprop="datePublished">
-				{datehelper.writeDate(article.updated_at)}
+				{datehelper.writeDate(article.created_at)}
 			</div>
 			<div>
 				{#each article.categories as articleCategory}
