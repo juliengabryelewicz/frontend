@@ -657,8 +657,16 @@ video {
   background-color: #b1ddab;
 }
 
+.bg-menu-hover {
+  background-color: #c1edbb;
+}
+
 .bg-link {
   background-color: #c1cac5;
+}
+
+.bg-link-hover {
+  background-color: #ccd5d0;
 }
 
 .hover\:bg-primary:hover {
@@ -673,8 +681,16 @@ video {
   background-color: #b1ddab;
 }
 
+.hover\:bg-menu-hover:hover {
+  background-color: #c1edbb;
+}
+
 .hover\:bg-link:hover {
   background-color: #c1cac5;
+}
+
+.hover\:bg-link-hover:hover {
+  background-color: #ccd5d0;
 }
 
 .focus\:bg-primary:focus {
@@ -689,8 +705,16 @@ video {
   background-color: #b1ddab;
 }
 
+.focus\:bg-menu-hover:focus {
+  background-color: #c1edbb;
+}
+
 .focus\:bg-link:focus {
   background-color: #c1cac5;
+}
+
+.focus\:bg-link-hover:focus {
+  background-color: #ccd5d0;
 }
 
 .bg-bottom {
@@ -4478,8 +4502,16 @@ h4 {
     background-color: #b1ddab;
   }
 
+  .sm\:bg-menu-hover {
+    background-color: #c1edbb;
+  }
+
   .sm\:bg-link {
     background-color: #c1cac5;
+  }
+
+  .sm\:bg-link-hover {
+    background-color: #ccd5d0;
   }
 
   .sm\:hover\:bg-primary:hover {
@@ -4494,8 +4526,16 @@ h4 {
     background-color: #b1ddab;
   }
 
+  .sm\:hover\:bg-menu-hover:hover {
+    background-color: #c1edbb;
+  }
+
   .sm\:hover\:bg-link:hover {
     background-color: #c1cac5;
+  }
+
+  .sm\:hover\:bg-link-hover:hover {
+    background-color: #ccd5d0;
   }
 
   .sm\:focus\:bg-primary:focus {
@@ -4510,8 +4550,16 @@ h4 {
     background-color: #b1ddab;
   }
 
+  .sm\:focus\:bg-menu-hover:focus {
+    background-color: #c1edbb;
+  }
+
   .sm\:focus\:bg-link:focus {
     background-color: #c1cac5;
+  }
+
+  .sm\:focus\:bg-link-hover:focus {
+    background-color: #ccd5d0;
   }
 
   .sm\:bg-bottom {
@@ -8278,8 +8326,16 @@ h4 {
     background-color: #b1ddab;
   }
 
+  .md\:bg-menu-hover {
+    background-color: #c1edbb;
+  }
+
   .md\:bg-link {
     background-color: #c1cac5;
+  }
+
+  .md\:bg-link-hover {
+    background-color: #ccd5d0;
   }
 
   .md\:hover\:bg-primary:hover {
@@ -8294,8 +8350,16 @@ h4 {
     background-color: #b1ddab;
   }
 
+  .md\:hover\:bg-menu-hover:hover {
+    background-color: #c1edbb;
+  }
+
   .md\:hover\:bg-link:hover {
     background-color: #c1cac5;
+  }
+
+  .md\:hover\:bg-link-hover:hover {
+    background-color: #ccd5d0;
   }
 
   .md\:focus\:bg-primary:focus {
@@ -8310,8 +8374,16 @@ h4 {
     background-color: #b1ddab;
   }
 
+  .md\:focus\:bg-menu-hover:focus {
+    background-color: #c1edbb;
+  }
+
   .md\:focus\:bg-link:focus {
     background-color: #c1cac5;
+  }
+
+  .md\:focus\:bg-link-hover:focus {
+    background-color: #ccd5d0;
   }
 
   .md\:bg-bottom {
@@ -12078,8 +12150,16 @@ h4 {
     background-color: #b1ddab;
   }
 
+  .lg\:bg-menu-hover {
+    background-color: #c1edbb;
+  }
+
   .lg\:bg-link {
     background-color: #c1cac5;
+  }
+
+  .lg\:bg-link-hover {
+    background-color: #ccd5d0;
   }
 
   .lg\:hover\:bg-primary:hover {
@@ -12094,8 +12174,16 @@ h4 {
     background-color: #b1ddab;
   }
 
+  .lg\:hover\:bg-menu-hover:hover {
+    background-color: #c1edbb;
+  }
+
   .lg\:hover\:bg-link:hover {
     background-color: #c1cac5;
+  }
+
+  .lg\:hover\:bg-link-hover:hover {
+    background-color: #ccd5d0;
   }
 
   .lg\:focus\:bg-primary:focus {
@@ -12110,8 +12198,16 @@ h4 {
     background-color: #b1ddab;
   }
 
+  .lg\:focus\:bg-menu-hover:focus {
+    background-color: #c1edbb;
+  }
+
   .lg\:focus\:bg-link:focus {
     background-color: #c1cac5;
+  }
+
+  .lg\:focus\:bg-link-hover:focus {
+    background-color: #ccd5d0;
   }
 
   .lg\:bg-bottom {
@@ -15878,8 +15974,16 @@ h4 {
     background-color: #b1ddab;
   }
 
+  .xl\:bg-menu-hover {
+    background-color: #c1edbb;
+  }
+
   .xl\:bg-link {
     background-color: #c1cac5;
+  }
+
+  .xl\:bg-link-hover {
+    background-color: #ccd5d0;
   }
 
   .xl\:hover\:bg-primary:hover {
@@ -15894,8 +15998,16 @@ h4 {
     background-color: #b1ddab;
   }
 
+  .xl\:hover\:bg-menu-hover:hover {
+    background-color: #c1edbb;
+  }
+
   .xl\:hover\:bg-link:hover {
     background-color: #c1cac5;
+  }
+
+  .xl\:hover\:bg-link-hover:hover {
+    background-color: #ccd5d0;
   }
 
   .xl\:focus\:bg-primary:focus {
@@ -15910,8 +16022,16 @@ h4 {
     background-color: #b1ddab;
   }
 
+  .xl\:focus\:bg-menu-hover:focus {
+    background-color: #c1edbb;
+  }
+
   .xl\:focus\:bg-link:focus {
     background-color: #c1cac5;
+  }
+
+  .xl\:focus\:bg-link-hover:focus {
+    background-color: #ccd5d0;
   }
 
   .xl\:bg-bottom {
