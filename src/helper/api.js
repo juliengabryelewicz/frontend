@@ -1,4 +1,5 @@
-const base = "https://"+process.env.API_URL;
+const base = "http://localhost:1337";
+//const base = "https://"+process.env.API_URL;
 
 function send({ method, path, data, token }) {
 	const fetch = process.browser ? window.fetch : require('node-fetch').default;

@@ -19,3 +19,12 @@ h3 {
 h4 {
   @apply uppercase font-title;
 }
+
+
+pre {
+  @apply whitespace-pre-wrap break-words bg-black p-2 rounded;
+}
+
+code {
+  @apply text-base text-green font-code;
+}
