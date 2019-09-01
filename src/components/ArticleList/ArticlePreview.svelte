@@ -8,7 +8,7 @@
 	import SmallButton from '../Buttons/SmallButton.svelte';
 </script>
 
-<div class="max-w-md w-full lg:flex p-5" itemscope itemtype="http://schema.org/Article">
+<div class="w-full lg:flex p-5" itemscope itemtype="http://schema.org/Article">
 	{#if articleList.image}
 	  <div class="h-48 lg:w-48 flex-none bg-cover text-center" style="background-image: url('https://{process.env.API_URL}/{articleList.image.url}')" title="{articleList.titre}">
 	  </div>
@@ -22,13 +22,11 @@
 			<p class="text-grey-dark text-xs mb-2" itemprop="datePublished">{datehelper.writeDate(articleList.created_at)}</p>
       <p class="text-grey-darker text-base" itemprop="articleBody">{articleList.resume}</p>
     </div>
-    <div class="flex items-center">
-      <div class="text-sm">
-        <p class="text-black leading-none">
+    <div class="items-center">
+      <div class="text-sm flex flex-wrap">
 				{#each articleList.categories as articleCategory}
 					<SmallButton content={articleCategory.titre} link="/blog/category/{articleCategory.slug}" />
 				{/each}
-				</p>
       </div>
     </div>
   </div>

@@ -6,7 +6,9 @@ module.exports = {
      'primary': '#f2f5f3',
      'secondary': '#edebdf',
      'menu': '#b1ddab',
-     'link': '#c1cac5'
+     'menu-hover': '#c1edbb',
+     'link': '#c1cac5',
+     'link-hover': '#ccd5d0'
    }),
    borderColor: theme => ({
      'primary': '#6B7770',
@@ -36,7 +38,7 @@ module.exports = {
     textShadow: ['responsive'],
     ellipsis: ['responsive'],
     hyphens: ['responsive'],
-    textUnset: ['responsive'],
+    textUnset: ['responsive']
   },
   plugins: [
     require('tailwindcss-typography')({

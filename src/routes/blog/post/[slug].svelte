@@ -48,7 +48,7 @@
 			<div class="mb-2 text-xs pb-4" itemprop="datePublished">
 				{datehelper.writeDate(article.created_at)}
 			</div>
-			<div>
+			<div class="flex flex-wrap">
 				{#each article.categories as articleCategory}
 					<SmallButton content={articleCategory.titre} link="/blog/category/{articleCategory.slug}" />
 				{/each}
