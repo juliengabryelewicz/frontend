@@ -10,7 +10,7 @@
 
 <div class="w-full lg:flex p-5" itemscope itemtype="http://schema.org/Article">
 	{#if articleList.image}
-	  <div class="h-48 lg:w-48 flex-none bg-cover text-center" style="background-image: url('http://localhost:1337/{articleList.image.url}')" title="{articleList.titre}">
+	  <div class="h-48 lg:w-48 flex-none bg-cover text-center" style="background-image: url('https://{process.env.API_URL}/{articleList.image.url}')" title="{articleList.titre}">
 	  </div>
 	{:else}
 		<div class="lg:h-auto lg:w-48 flex-none overflow-hidden">
