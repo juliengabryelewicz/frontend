@@ -13,7 +13,7 @@
 		const articlesList = await api.get(queryApi);
 		const articlesCount = await api.get(queryCount);
 
-		const categories = await api.get(`categories`);
+		const categories = await api.get(`categories?_sort=titre:ASC`);
 		return { categories, articlesList, articlesCount };
 	}
 </script>

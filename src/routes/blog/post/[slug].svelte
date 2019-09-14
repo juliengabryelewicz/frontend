@@ -7,7 +7,7 @@
 	export async function preload({ params, query }) {
 		const response = await api.get(`articles?slug=${params.slug}`);
 		const article = response[0];
-		const categories = await api.get(`categories`);
+		const categories = await api.get(`categories?_sort=titre:ASC`);
 		if(article === undefined){
 			this.error(404, "Nous n'avons pas trouvé la page que vous recherchez");
 		}else{

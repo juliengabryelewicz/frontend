@@ -16,11 +16,11 @@
 
 		const response = await api.get(`categories?slug=${params.slug}`);
 		const category = response[0];
-		const categories = await api.get(`categories`);
 
 		if(category === undefined){
 			this.error(404, "Nous n'avons pas trouvé la page que vous recherchez");
 		}else{
+			const categories = await api.get(`categories?_sort=titre:ASC`);
 			return { category, categories, articlesList, articlesCount };
 		}
 	}
