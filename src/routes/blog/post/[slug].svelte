@@ -5,12 +5,12 @@
 	import SmallButton from '../../../components/Buttons/SmallButton.svelte';
 
 	export async function preload({ params, query }) {
-		const response = await api.get(`articles?slug=${params.slug}`);
+		const response = await api.getArticleFromSlug(params.slug);
 		const article = response[0];
-		const categories = await api.get(`categories?_sort=titre:ASC`);
 		if(article === undefined){
 			this.error(404, "Nous n'avons pas trouvé la page que vous recherchez");
 		}else{
+			const categories = await api.getAllCategories();
 			return { article, categories };
 		}
 	}

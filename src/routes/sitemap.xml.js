@@ -39,9 +39,9 @@ export async function get(req, res) {
     'Content-Type': 'application/xml'
   });
 
-  const posts = await api.get(`articles?visible=1&_sort=created_at:DESC`);
-  const pages = await api.get(`pages?visible=1&_sort=created_at:DESC`);
-  const categories = await api.get(`categories?_sort=created_at:DESC`);
+  const posts = await api.getAllVisibleArticles();
+  const pages = await api.getAllVisiblePages();
+  const categories = await api.getAllVisibleCategories();
   const sitemapElement = renderSitemap(posts, pages, categories, ['', 'blog']);
   res.end(sitemapElement);
 }

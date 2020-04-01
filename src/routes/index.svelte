@@ -1,14 +1,16 @@
 <script context="module">
+
   import * as api from '../helper/api.js';
 	import MainList from '../components/MainList/index.svelte';
 	import BigButton from '../components/Buttons/BigButton.svelte';
 
 	export async function preload({ params, query }) {
-		const articlesList = await api.get(`articles?visible=1&_sort=created_at:DESC&_limit=3`);
+		const articlesList = await api.getArticlesHomePage();
 		return { articlesList };
 	}
 </script>
 <script>
+	console.log("Protocol"+process.env.PROTOCOL);
 	export let articlesList;
 </script>
 
@@ -33,7 +35,7 @@
 <section id="a-propos" class="w-full lg:mt-0 text-gray-900 leading-normal">
 	<div class="mx-auto text-center">
 		<h1>développeur web habitant à Arques dans le Pas-de-Calais.</h1>
-		<p>Je travaille actuellement pour <a href="https://www.adexos.fr/" title="Adexos" target="_blank">l'agence web Adexos</a> à Béthune en tant que Développeur Magento (1 & 2).</p>
+		<p>Je travaille actuellement pour <a href="https://www.adexos.fr/" title="Adexos" target="_blank" class="underline">l'agence web Adexos</a> à Béthune en tant que Développeur Web.</p>
 		<h2 class="border-t-4 border-secondary text-center font-title top-title uppercase text-xl relative">
 			<span class="bg-transparent inline-block top-span relative bg-primary px-2 font-primary">Mes passions</span>
 		</h2>
@@ -41,7 +43,7 @@
 		  <div class="p-4 lg:w-1/4">
 				<h4>Programmation</h4>
 				<div class="text-justify">
-					<p>Passionné depuis plusieurs années, c'est en toute logique que je me suis orienté vers le multimédia (web,mobile...). J'ai une préférence pour la programmation fonctionnelle (Elixir, Rust) et logique (Prolog, Picat).</p>
+					<p>Passionné depuis plusieurs années, c'est en toute logique que je me suis orienté vers le multimédia (web,mobile...).</p>
 				</div>
 			</div>
 		  <div class="p-4 lg:w-1/4">
@@ -59,7 +61,7 @@
 		  <div class="p-4 lg:w-1/4">
 			 <h4>Jeux d'aventure</h4>
 			 <div class="text-justify">
-			 	<p>Point and click, textuel, RPG, rétro... tous ces jeux ont marqué mon enfance et mon adolescence et également maintenant. Des "Chevaliers de Baphomet" à "Fran Bow" pour citer un des plus récents.</p>
+			 	<p>Point and click, textuel, RPG, rétro... tous ces jeux ont marqué mon enfance et mon adolescence et également maintenant. Des "Chevaliers de Baphomet" à "Oxenfree" pour citer un des plus récents.</p>
 			 </div>
 			</div>
 		</div>

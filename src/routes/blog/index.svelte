@@ -5,15 +5,11 @@
 
 	export async function preload({ params, query }) {
 		let currentPage = query && query.page ? + query.page - 1 : 0
-		const endpoint = 'articles';
-		const page_size = 10;
-		let parameters = `visible=1&_sort=created_at:DESC&_limit=${page_size}&_start=${currentPage * page_size}`;
-		let queryApi = `${endpoint}?${parameters}`;
-		let queryCount = `${endpoint}/count?${parameters}`;
-		const articlesList = await api.get(queryApi);
-		const articlesCount = await api.get(queryCount);
+		
+		const articlesList = await api.getList('articles', currentPage);
+		const articlesCount = await api.getListCount('articles', currentPage);
+		const categories = await api.getAllCategories();
 
-		const categories = await api.get(`categories?_sort=titre:ASC`);
 		return { categories, articlesList, articlesCount };
 	}
 </script>

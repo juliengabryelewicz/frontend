@@ -6,21 +6,16 @@
 	export async function preload({ params, query }) {
 
 		let currentPage = query && query.page ? + query.page - 1 : 0
-		const endpoint = 'articles';
-		const page_size = 10;
-		let parameters = `visible=1&categories.slug=${params.slug}&_sort=created_at:DESC&_limit=${page_size}&_start=${currentPage * page_size}`;
-		let queryApi = `${endpoint}?${parameters}`;
-		let queryCount = `${endpoint}/count?${parameters}`;
-		const articlesList = await api.get(queryApi);
-		const articlesCount = await api.get(queryCount);
+		const articlesList = await api.getListArticlesFromCategory(params.slug, currentPage);
+		const articlesCount = await api.getListCountArticlesFromCategory(params.slug, currentPage);
 
-		const response = await api.get(`categories?slug=${params.slug}`);
+		const response = await api.getCategoryFromSlug(params.slug);
 		const category = response[0];
 
 		if(category === undefined){
 			this.error(404, "Nous n'avons pas trouvé la page que vous recherchez");
 		}else{
-			const categories = await api.get(`categories?_sort=titre:ASC`);
+			const categories = await api.getAllCategories();
 			return { category, categories, articlesList, articlesCount };
 		}
 	}

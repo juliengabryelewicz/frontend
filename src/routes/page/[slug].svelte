@@ -2,7 +2,7 @@
 	import * as api from '../../helper/api.js';
 
 	export async function preload({ params, query }) {
-		const response = await api.get(`pages?slug=${params.slug}`);
+		const response = await api.getPageFromSlug(params.slug);
 		const page = response[0];
 		if(page === undefined){
 			this.error(404, "Nous n'avons pas trouvé la page que vous recherchez");
